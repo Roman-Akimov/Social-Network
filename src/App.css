@@ -10,33 +10,3 @@
 
   width: 1800px;
 }
-
-.header{
-  grid-area: h;
-  background-color: cornflowerblue;
-}
-
-.header img{
-  width: 100px;
-  height: 40px;
-}
-
-.nav{
-  grid-area: n;
-  background-color: #bed6fd;
-}
-
-.content{
-  grid-area: c;
-  background-color: #1a6aa9;
-}
-
-.content .background-photo img{
-  width: 1000px;
-  height: 40px;
-}
-
-.content .avatar img{
-  width: 100px;
-  height: 100px;
-}

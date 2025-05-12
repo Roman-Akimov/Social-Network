@@ -5,8 +5,12 @@
   "h h h"
   "n c c";
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 2fr 18fr;
   /*grid-gap: 10px;*/
 
   width: 1800px;
+}
+
+.app-wrapper-content{
+  background-color: red;
 }

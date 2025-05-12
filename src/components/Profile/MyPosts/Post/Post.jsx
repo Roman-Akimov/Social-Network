@@ -2,13 +2,16 @@ import React from 'react';
 import s from "./Post.module.css";
 
 
-function Post() {
+function Post(props) {
+
     return (
         <div className={s.item}>
             <img src='https://i.pinimg.com/736x/23/d9/2a/23d92af013c486ae8c11d2814d9affa0.jpg'/>
             post 1
+            <br></br>
+            {props.message},
             <div>
-                <span>like</span>
+                <span>like {props.count}</span>
             </div>
         </div>
 

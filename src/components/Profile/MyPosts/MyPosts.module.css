@@ -8,6 +8,12 @@
     height: 100px;
 }
 
+
+
 .posts .item {
     color: darkorange;
+}
+
+.postsBlock{
+    padding: 10px;
 }

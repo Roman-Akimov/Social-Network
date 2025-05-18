@@ -15,12 +15,12 @@ function App() {
                 <Navbar/>
                 <div class='app-wrapper-content'>
                     <Routes>
+                        <Route path='/profile*' element={<Profile/>}/>
+                        <Route path='/dialogs*' element={<Dialogs/>}/>
+                        {/*пока не добавлено*/}
                         <Route path='/profile' element={<Profile/>}/>
-                        <Route path='/dialogs' element={<Dialogs/>}/>
-                        <Route path='/news' element={<Profile/>}/>
-                        <Route path='/music' element={<Profile/>}/>
-                        <Route path='/setings' element={<Profile/>}/>
-
+                        <Route path='/profile' element={<Profile/>}/>
+                        <Route path='/profile' element={<Profile/>}/>
                     </Routes>
                 </div>
             </div>

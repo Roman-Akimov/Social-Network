@@ -7,20 +7,23 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from "react-router";
 
 function App(props) {
-
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
-                <Navbar/>
-                <div class='app-wrapper-content'>
+                <Navbar friends={props.state.sitebar.friends}/>
+                <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/profile*' element={<Profile postData={props.postData}/>}/>}/>
-                        <Route path='/dialogs*' element={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
+                        <Route path='/profile/*' element={<Profile posts={props.state.profilePage.posts} />} />
+                        <Route path='/dialogs/*' element={<Dialogs
+                            dialogs={props.state.dialogsPage.dialogs}
+                            messages={props.state.dialogsPage.messages}
+                            userData={props.state.avatarUser}
+                        />}/>
                         {/*пока не добавлено*/}
-                        <Route path='/profile' element={<Profile/>}/>
-                        <Route path='/profile' element={<Profile/>}/>
-                        <Route path='/profile' element={<Profile/>}/>
+                        {/*<Route path='/profile' element={<Profile/>}/>*/}
+                        {/*<Route path='/profile' element={<Profile/>}/>*/}
+                        {/*<Route path='/profile' element={<Profile/>}/>*/}
                     </Routes>
                 </div>
             </div>

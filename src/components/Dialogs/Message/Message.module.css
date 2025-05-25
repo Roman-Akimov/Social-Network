@@ -1,0 +1,16 @@
+/* Базовый контейнер */
+.userMessage{
+    text-align: right;
+
+}
+
+.otherMessage{
+    text-align: left;
+}
+
+.userMessage img,
+.otherMessage img{
+    width: 40px;
+    height: 40px;
+    border-radius: 18px;
+}

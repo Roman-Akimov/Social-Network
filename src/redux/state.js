@@ -9,7 +9,8 @@ let state = {
         posts: [
             {id: 1, message: 'Hi, how are u?', likesCount: "12"},
             {id: 2, message: 'its mt first post!)', likesCount: "43"},
-        ]
+        ],
+        newPostText: "введите текст.."
     },
     dialogsPage: {
         dialogs: [
@@ -25,7 +26,9 @@ let state = {
             {id: 2, message: "hello", ava: "https://avatars.mds.yandex.net/i?id=6f2fa2e29019048d55dc0de3cdd5ffd2_l-5350111-images-thumbs&n=13", name: "other"},
             {id: 3, message: "how are u", ava: "https://avatars.githubusercontent.com/u/1133213?v=4", name: "user"},
             {id: 4, message: "fine thx", ava: "https://avatars.mds.yandex.net/i?id=6f2fa2e29019048d55dc0de3cdd5ffd2_l-5350111-images-thumbs&n=13", name: "other"},
-        ]},
+        ],
+        newMessagesText: "new message"
+    },
     sitebar: {
         friends: [
             {ava: "https://p1.zoon.ru/preview/GuEJ78Xw9NOUJjbw_AIIGw/2400x1500x85/1/4/4/original_57d8fec040c08815228cc1fa_6266b446e6f369.86812448.jpg", name: "Alex"},
@@ -36,24 +39,38 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export let addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0
     }
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = "";
     rendererEntireTree(state);
 }
 
-export let addMessage = (message) => {
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rendererEntireTree(state);
+}
+
+export let addMessage = () => {
     let newMessage = {
         id: 5,
-        message: message,
+        message: state.dialogsPage.newMessagesText,
         ava:"https://avatars.githubusercontent.com/u/1133213?v=4",
         name: "user"
     }
     state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessagesText = '';
+    rendererEntireTree(state);
+}
+
+export let updateNewMessageText = (newText) =>{
+    state.dialogsPage.newMessagesText = newText;
     rendererEntireTree(state);
 }
 

@@ -9,7 +9,7 @@ function Post(props) {
             <img src='https://i.pinimg.com/736x/23/d9/2a/23d92af013c486ae8c11d2814d9affa0.jpg'/>
             post 1
             <br></br>
-            {props.message},
+            {props.message}
             <div>
                 <span>like {props.likesCount}</span>
             </div>

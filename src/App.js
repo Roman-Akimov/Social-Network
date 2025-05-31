@@ -14,11 +14,12 @@ function App(props) {
                 <Navbar friends={props.state.sitebar.friends}/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/profile/*' element={<Profile posts={props.state.profilePage.posts} />} />
+                        <Route path='/profile/*' element={<Profile posts={props.state.profilePage.posts} addPost={props.addPost}/>} />
                         <Route path='/dialogs/*' element={<Dialogs
                             dialogs={props.state.dialogsPage.dialogs}
                             messages={props.state.dialogsPage.messages}
                             userData={props.state.avatarUser}
+                            addMessage={props.addMessage}
                         />}/>
                         {/*пока не добавлено*/}
                         {/*<Route path='/profile' element={<Profile/>}/>*/}

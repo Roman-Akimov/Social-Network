@@ -9,8 +9,9 @@ const Dialogs = (props) => {
 
     let addText = () => {
         let text = refAddText.current.value;
-        alert(text);
+        props.addMessage(text);
     }
+
     let dialogsItems = props.dialogs.map( d => <DialogItem avatar={d.avatar} name={d.name} id={d.id}/>  );
     let messagesElements = props.messages.map( m => <Message message={m.message} ava={m.ava} name={m.name}/>);
 

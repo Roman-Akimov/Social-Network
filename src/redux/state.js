@@ -1,13 +1,14 @@
-let state = {
+import {rendererEntireTree} from "../render";
 
+let state = {
     user:[
         {avatarUser: "https://www.pinclipart.com/picdir/middle/415-4151365_line-icon-mac-os-user-icon-clipart.png"}
     ],
 
     profilePage: {
         posts: [
-            {id: 1, message: 'Hi, how are u?', likesCount: '12'},
-            {id: 2, message: 'its mt first post!)', likesCount: '43'},
+            {id: 1, message: 'Hi, how are u?', likesCount: "12"},
+            {id: 2, message: 'its mt first post!)', likesCount: "43"},
         ]
     },
     dialogsPage: {
@@ -32,9 +33,28 @@ let state = {
             {ava: "https://p1.zoon.ru/preview/GuEJ78Xw9NOUJjbw_AIIGw/2400x1500x85/1/4/4/original_57d8fec040c08815228cc1fa_6266b446e6f369.86812448.jpg", name: "Rex"},
 
         ]
-
     }
+}
 
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likesCount: 0
+    }
+    state.profilePage.posts.push(newPost);
+    rendererEntireTree(state);
+}
+
+export let addMessage = (message) => {
+    let newMessage = {
+        id: 5,
+        message: message,
+        ava:"https://avatars.githubusercontent.com/u/1133213?v=4",
+        name: "user"
+    }
+    state.dialogsPage.messages.push(newMessage);
+    rendererEntireTree(state);
 }
 
 export default state;

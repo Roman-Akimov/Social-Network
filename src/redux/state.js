@@ -1,4 +1,6 @@
-import {rendererEntireTree} from "../render";
+let rerenderEntireTree = () => {
+    console.log("State changed");
+}
 
 let state = {
     user:[
@@ -27,7 +29,7 @@ let state = {
             {id: 3, message: "how are u", ava: "https://avatars.githubusercontent.com/u/1133213?v=4", name: "user"},
             {id: 4, message: "fine thx", ava: "https://avatars.mds.yandex.net/i?id=6f2fa2e29019048d55dc0de3cdd5ffd2_l-5350111-images-thumbs&n=13", name: "other"},
         ],
-        newMessagesText: "new message"
+        newMessagesText: "введите сообщение.."
     },
     sitebar: {
         friends: [
@@ -41,7 +43,7 @@ let state = {
 
 window.state = state;
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -49,15 +51,15 @@ export let addPost = () => {
     }
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = "";
-    rendererEntireTree(state);
+    rerenderEntireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
-    rendererEntireTree(state);
+    rerenderEntireTree(state);
 }
 
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         id: 5,
         message: state.dialogsPage.newMessagesText,
@@ -65,13 +67,17 @@ export let addMessage = () => {
         name: "user"
     }
     state.dialogsPage.messages.push(newMessage);
-    state.dialogsPage.newMessagesText = '';
-    rendererEntireTree(state);
+    state.dialogsPage.newMessagesText = "";
+    rerenderEntireTree(state);
 }
 
-export let updateNewMessageText = (newText) =>{
+export const updateNewMessageText = (newText) =>{
     state.dialogsPage.newMessagesText = newText;
-    rendererEntireTree(state);
+    rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer; // (наблюдатель) паттерн
 }
 
 export default state;

@@ -9,7 +9,7 @@ export const Message = (props) => {
     const messageText = props.name === "other" ? d.userMessage : d.otherMessage;
     return (
 
-        <div>
+        <div className="body">
             <div className={messageText}>
                 {isUser && <img src={props.ava}/>}
                 <span>{props.message}</span>

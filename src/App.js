@@ -16,16 +16,14 @@ function App(props) {
                     <Routes>
                         <Route path='/profile/*' element={<Profile profilePage={props.state.profilePage}
                                                                    newPostText={props.state.newPostText}
-                                                                   addPost={props.addPost}
-                                                                   updateNewPostText={props.updateNewPostText}
+                                                                   dispatch={props.dispatch}
 
                         />} />
                         <Route path='/dialogs/*' element={<Dialogs
                             dialogs={props.state.dialogsPage.dialogs}
                             messages={props.state.dialogsPage.messages}
                             userData={props.state.avatarUser}
-                            addMessage={props.addMessage}
-                            updateNewMessageText={props.updateNewMessageText}
+                            dispatch={props.dispatch}
                             newMessagesText={props.state.dialogsPage.newMessagesText}
                         />}/>
                         {/*пока не добавлено*/}

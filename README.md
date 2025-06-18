@@ -15,15 +15,8 @@
 
 ## 🛠️ Технологии
 
-- **Frontend:** React, React Router, Axios, TailwindCSS / Bootstrap (укажи, что используешь)
-- **Backend:** Node.js, Express (если есть), REST API
-- **База данных:** MongoDB / PostgreSQL / Firebase и т.д.
-- **Аутентификация:** JWT / OAuth
-- **Прочее:** ESLint, Prettier, Git, GitHub
-
-## 📦 Установка
-
-1. **Клонируйте репозиторий**
-   ```bash
-   git clone https://github.com/ваш-ник/social-network.git
-   cd social-network
+- **Frontend:** React, Redux
+- **Backend:** Node.js
+- **База данных:** /
+- **Аутентификация:** /
+- **Прочее:** /

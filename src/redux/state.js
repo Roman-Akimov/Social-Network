@@ -1,3 +1,8 @@
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
+
+
 let store = {
     _state: {
         user:[
@@ -40,15 +45,13 @@ let store = {
     _callSubscriber(){
         console.log("State changed");
     },
-
     getState(){
         return this._state;
     },
     subscribe(observer){
         this._callSubscriber = observer; // (наблюдатель) паттерн
     },
-
-    dispatch(action){ // {type: 'ADD-POST' }
+    dispatch(action){
         if (action.type === "ADD-POST"){
             let newPost = {
                 id: 5,
@@ -79,8 +82,15 @@ let store = {
             this._callSubscriber(this._state);
         }
     }
-
 }
+
+export const addPostActionCreator = () => ({ type: ADD_POST });
+export const updateNewPostActionCreator = (text) =>
+    ({type: UPDATE_NEW_POST_TEXT, newText: text});
+export const addNewMessageText = () => ({type: "ADD-MESSAGE"})
+export const updateNewMessageText = (text) => (
+    {type: UPDATE_NEW_MESSAGE_TEXT, newText: text}
+)
 
 window.store = store;
 export default store;

@@ -14,9 +14,10 @@ function App(props) {
                 <Navbar friends={props.state.sitebar.friends}/>
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/profile/*' element={<Profile profilePage={props.state.profilePage}
-                                                                   newPostText={props.state.newPostText}
-                                                                   dispatch={props.dispatch}
+                        <Route path='/profile/*' element={<Profile
+                            profilePage={props.state.profilePage}
+                            newPostText={props.state.newPostText}
+                            dispatch={props.dispatch}
 
                         />} />
                         <Route path='/dialogs/*' element={<Dialogs

@@ -7,7 +7,6 @@ let store = {
         user:[
             {avatarUser: "https://www.pinclipart.com/picdir/middle/415-4151365_line-icon-mac-os-user-icon-clipart.png"}
         ],
-
         profilePage: {
             posts: [
                 {id: 1, message: 'Hi, how are u?', likesCount: "12"},

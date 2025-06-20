@@ -1,7 +1,7 @@
 import React from 'react';
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/state";
+import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/profile-reducer";
 
 
 function MyPosts(props) {
@@ -30,11 +30,9 @@ function MyPosts(props) {
                 </div>
                 <button onClick={addPost}>Add post</button>
             </div>
-
             <div className='s.posts'>
                 {postsElements}
             </div>
-
         </div>
     );
 }

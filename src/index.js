@@ -8,20 +8,14 @@ import {Provider} from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let rerenderEntireTree = (state) => {
-    root.render(
-        <React.StrictMode>
-            <Provider store={store}>
-                <App state={state}/>
-            </Provider>
-        </React.StrictMode>
-    );
-    reportWebVitals();
-}
-rerenderEntireTree(store.getState());
+root.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </React.StrictMode>
+);
+reportWebVitals();
 
-store.subscribe( () => {
-    let state = store.getState();
-    rerenderEntireTree(state);
-});
+
 

@@ -26,15 +26,15 @@ function Navbar(props) {
             <NavLink>Settings</NavLink>
         </div>
 
-        <div className={s.friendOnline}>
-            <p>Friends online</p>
-            {props.friends.map(p => (
-                <div>
-                    <img src={p.ava}/>
-                    {p.name}
-                </div>
-            ))}
-        </div>
+        {/*<div className={s.friendOnline}>*/}
+        {/*    <p>Friends online</p>*/}
+        {/*    {props.friends.map(p => (*/}
+        {/*        <div>*/}
+        {/*            <img src={p.ava}/>*/}
+        {/*            {p.name}*/}
+        {/*        </div>*/}
+        {/*    ))}*/}
+        {/*</div>*/}
 
     </nav>);
 }

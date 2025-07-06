@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import {BrowserRouter, Route, Routes} from "react-router";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import Users from "./components/Users/Users";
 
 function App(props) {
     return (
@@ -14,9 +15,11 @@ function App(props) {
                 <Navbar />{/*friends={props.state.sidebar.friends}*/}
                 <div className='app-wrapper-content'>
                     <Routes>
-                        <Route path='/profile/*' element={<Profile/>}/>
+                        <Route path='/profile/*' element={<Profile/>}  />
 
-                        <Route path='/dialogs/*' element={<DialogsContainer/>}/>
+                        <Route path='/dialogs/*' element={<DialogsContainer/>}  />
+
+                        <Route path='/users/*' element={<Users/>}   />
                         {/*пока не добавлено*/}
                         {/*<Route path='/profile' element={<Profile/>}/>*/}
                         {/*<Route path='/profile' element={<Profile/>}/>*/}

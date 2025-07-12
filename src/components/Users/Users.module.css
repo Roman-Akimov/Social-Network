@@ -1,0 +1,26 @@
+
+.body{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #a29e9e;
+}
+
+.body img{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+button{
+    border-radius: 5px;
+}
+
+.followed{
+    background-color: #f5d6d6;
+}
+
+.unfollowed{
+    background-color: #bec7f3;
+}

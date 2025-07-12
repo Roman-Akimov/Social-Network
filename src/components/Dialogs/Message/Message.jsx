@@ -1,5 +1,4 @@
 import React from "react";
-// import s from "./../Dialogs.module.css"
 import d from "./Message.module.css"
 
 

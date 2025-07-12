@@ -4,12 +4,12 @@ const SET_USERS = "SET_USERS";
 
 let initialState = {
     users: [
-            {id: 1, userAvatar:"https://www.clipartmax.com/png/full/258-2582267_circled-user-male-skin-type-1-2-icon-male-user-icon.png",
-                followed: false, fullName: "David", status: "Im a programmer", location:{cityName: "Samara", countryName: "Russia"}},
-            {id: 2, userAvatar:"https://www.clipartmax.com/png/full/258-2582267_circled-user-male-skin-type-1-2-icon-male-user-icon.png",
-                followed: true, fullName: "John", status: "saller of people", location:{cityName: "New York", countryName: "USA"}},
-            {id: 3, userAvatar:"https://www.clipartmax.com/png/full/258-2582267_circled-user-male-skin-type-1-2-icon-male-user-icon.png",
-                followed: false, fullName: "Kira", status: "Junior Dota player", location:{cityName: "Minsk", countryName: "Belarus"}},
+        // {id: 1, userAvatar:"https://cdn0.iconfinder.com/data/icons/team-work-and-organization-2/128/78-1024.png",
+        //     followed: false, name: "David", status: "Im a programmer", location:{cityName: "Samara", countryName: "Russia"}},
+        // {id: 2, userAvatar:"https://cdn0.iconfinder.com/data/icons/team-work-and-organization-2/128/78-1024.png",
+        //     followed: true, name: "John", status: "saller of people", location:{cityName: "New York", countryName: "USA"}},
+        // {id: 3, userAvatar:"https://cdn0.iconfinder.com/data/icons/team-work-and-organization-2/128/78-1024.png",
+        //     followed: false, name: "Kira", status: "Junior Dota player", location:{cityName: "Minsk", countryName: "Belarus"}},
     ]
 };
 
@@ -28,7 +28,7 @@ const usersReducer = (state = initialState, action = {}) => {
         case SET_USERS: {
             return {
                 ...state,
-                users: [/*...state.users*/, ...action.users]
+                users: [/*...state.users,*/ ...action.users]
             }
         }
 
